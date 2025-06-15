@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://www.10wallpaper.com/wallpaper/1366x768/1304/laptop_room_on_the_desk-Digital_products_HD_widescreen_Wallpaper_1366x768.jpg') no-repeat center center/cover;
+  opacity: 0.9;
+}
+
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220, 220, 220, 0.);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.glass-card {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.window-controls {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.control-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.control-btn.close {
+  background-color: #ff5f57;
+}
+
+.control-btn.minimize {
+  background-color: #ffbd2e;
+}
+
+.control-btn.maximize {
+  background-color: #28c940;
+}
+
+.left-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frame {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-frame .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.3) 2px, transparent 2px),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 2px, transparent 2px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.image-frame img[src]:not([src=""]) + .placeholder {
+  display: none;
+}
+
+.right-box {
+  flex: 2;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  width: 50px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-bar {
+  width: 75%;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-indent: 10px;
+}
+
+.text-line {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  border-radius: 4px;
+  text-indent: 10px;
+}
